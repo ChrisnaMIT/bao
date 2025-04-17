@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BaoController!{% endblock %}
+
+{% block body %}
+<h1>Tous les baos </h1>
+
+    {% for bao in baos  %}
+        <p>le {{ bao.name }}</p>
+        <p>le gout : {{ bao.taste }}
+            <br>
+            <a href="{{ path('app_bao_show', {id: bao.id}) }}">Voir le bao </a>
+            <br>
+            <a href="{{ path('bao_edit', {id: bao.id}) }}">Mdifier ce bao</a>
+            <hr>
+
+
+
+    {% endfor %}
+
+
+{% endblock %}
