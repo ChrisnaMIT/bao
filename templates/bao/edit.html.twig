@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(bao) }}
+
+    {{ form_row(bao.name) }}
+    {{ form_row(bao.taste) }}
+    <button type="submit">Changer</button>
+
+
+    {{ form_end(bao) }}
+
+
+
+{% endblock %}

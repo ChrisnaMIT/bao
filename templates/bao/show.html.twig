@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>  le {{ bao.name }}</h1>
+    <p> avec : {{ bao.taste }}</p>
+    <a href="{{ path('app_bao') }}">Retour au menu </a>
+    <br>
+    <br>
+    <a href="{{ path('bao_delete', {id: bao.id}) }}">Supprimer ce bao</a>
+
+
+{% endblock %}
